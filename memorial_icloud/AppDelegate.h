@@ -24,7 +24,7 @@
 -(NSPersistentStoreCoordinator *)persistentStoreCoordinator;
 
 //managedObjectModel的初始化赋值函数
-//-(NSManagedObjectModel *)managedObjectModel;
+-(NSManagedObjectModel *)managedObjectModel;
 
 //managedObjectContext的初始化赋值函数
 -(NSManagedObjectContext *)managedObjectContext;
