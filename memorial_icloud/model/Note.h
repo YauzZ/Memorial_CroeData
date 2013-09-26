@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @interface Note : NSManagedObject
 
 @property (nonatomic, retain) NSString * title;
@@ -17,6 +16,6 @@
 @property (nonatomic, retain) NSDate * create_at;
 @property (nonatomic, retain) NSDate * modify_at;
 
-- (NSString *) description;
+
 
 @end

@@ -1,5 +1,5 @@
 //
-//  Note.m
+//  Note+description.h
 //  memorial_icloud
 //
 //  Created by Colin Yang Hong on 13-9-26.
@@ -8,12 +8,8 @@
 
 #import "Note.h"
 
+@interface Note (description)
 
-@implementation Note
-
-@dynamic title;
-@dynamic content;
-@dynamic create_at;
-@dynamic modify_at;
+- (NSString *) description;
 
 @end

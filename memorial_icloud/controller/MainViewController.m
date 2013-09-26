@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "AppDelegate.h"
 #import "Note.h"
+#import "MainTableViewCell.h"
 
 @interface MainViewController ()
 
@@ -37,6 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self updateData];
+    [self.tableView reloadData];
 }
 
 // 查询操作
@@ -82,25 +84,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _notes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    static NSString *CellIdentifier = @"CellOfNotes";
+    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
-    
+    Note *aNote = _notes[indexPath.row];
+    cell.title.text = aNote.title;
+    cell.date.text = [aNote.create_at description];
     return cell;
 }
 
@@ -143,7 +144,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -153,6 +154,5 @@
     // Pass the selected object to the new view controller.
 }
 
- */
 
 @end

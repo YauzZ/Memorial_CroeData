@@ -25,6 +25,9 @@
 		3B482C8717F3E0EC00FA499F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B482C8617F3E0EC00FA499F /* MainStoryboard.storyboard */; };
 		3B482C8D17F3E33800FA499F /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C8C17F3E33800FA499F /* Note.m */; };
 		3B482C9017F3E36C00FA499F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C8F17F3E36C00FA499F /* MainViewController.m */; };
+		3B482C9317F3E82800FA499F /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C9217F3E82800FA499F /* TextViewController.m */; };
+		3B482C9717F3E89F00FA499F /* Note+description.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C9617F3E89F00FA499F /* Note+description.m */; };
+		3B482C9A17F3EE2100FA499F /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C9917F3EE2100FA499F /* MainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		3B482C8C17F3E33800FA499F /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = model/Note.m; sourceTree = "<group>"; };
 		3B482C8E17F3E36C00FA499F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = controller/MainViewController.h; sourceTree = "<group>"; };
 		3B482C8F17F3E36C00FA499F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = controller/MainViewController.m; sourceTree = "<group>"; };
+		3B482C9117F3E82800FA499F /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewController.h; path = controller/TextViewController.h; sourceTree = "<group>"; };
+		3B482C9217F3E82800FA499F /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewController.m; path = controller/TextViewController.m; sourceTree = "<group>"; };
+		3B482C9517F3E89F00FA499F /* Note+description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Note+description.h"; path = "model/Note+description.h"; sourceTree = "<group>"; };
+		3B482C9617F3E89F00FA499F /* Note+description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Note+description.m"; path = "model/Note+description.m"; sourceTree = "<group>"; };
+		3B482C9817F3EE2100FA499F /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewCell.h; path = controller/MainTableViewCell.h; sourceTree = "<group>"; };
+		3B482C9917F3EE2100FA499F /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewCell.m; path = controller/MainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +136,13 @@
 				3B482C6317F3DECA00FA499F /* AppDelegate.m */,
 				3B482C8E17F3E36C00FA499F /* MainViewController.h */,
 				3B482C8F17F3E36C00FA499F /* MainViewController.m */,
+				3B482C9817F3EE2100FA499F /* MainTableViewCell.h */,
+				3B482C9917F3EE2100FA499F /* MainTableViewCell.m */,
+				3B482C9117F3E82800FA499F /* TextViewController.h */,
+				3B482C9217F3E82800FA499F /* TextViewController.m */,
 				3B482C8617F3E0EC00FA499F /* MainStoryboard.storyboard */,
 				3B482C6817F3DECA00FA499F /* Images.xcassets */,
-				3B482C8B17F3E33800FA499F /* Note.h */,
-				3B482C8C17F3E33800FA499F /* Note.m */,
+				3B482C9417F3E87A00FA499F /* mode */,
 				3B482C6517F3DECA00FA499F /* memorial_icloud.xcdatamodeld */,
 				3B482C5A17F3DECA00FA499F /* Supporting Files */,
 			);
@@ -164,6 +176,17 @@
 				3B482C7917F3DECA00FA499F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B482C9417F3E87A00FA499F /* mode */ = {
+			isa = PBXGroup;
+			children = (
+				3B482C8B17F3E33800FA499F /* Note.h */,
+				3B482C8C17F3E33800FA499F /* Note.m */,
+				3B482C9517F3E89F00FA499F /* Note+description.h */,
+				3B482C9617F3E89F00FA499F /* Note+description.m */,
+			);
+			name = mode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +288,10 @@
 				3B482C6417F3DECA00FA499F /* AppDelegate.m in Sources */,
 				3B482C6017F3DECA00FA499F /* main.m in Sources */,
 				3B482C6717F3DECA00FA499F /* memorial_icloud.xcdatamodeld in Sources */,
+				3B482C9317F3E82800FA499F /* TextViewController.m in Sources */,
 				3B482C9017F3E36C00FA499F /* MainViewController.m in Sources */,
+				3B482C9717F3E89F00FA499F /* Note+description.m in Sources */,
+				3B482C9A17F3EE2100FA499F /* MainTableViewCell.m in Sources */,
 				3B482C8D17F3E33800FA499F /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
