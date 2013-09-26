@@ -40,7 +40,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self updateNote];
+    if (_textView.text.length == 0) {
+        [self deleteNote];
+    } else {
+        [self updateNote];
+    }
 }
 
 - (void)updateNote
@@ -52,6 +56,16 @@
     NSError *error;
     BOOL isUpdateSuccess = [self.myDelegate.managedObjectContext save:&error ];
     if (!isUpdateSuccess) {
+        NSLog(@"Error:%@,%@",error,[error userInfo]);
+    }
+}
+
+- (void)deleteNote
+{
+    [self.myDelegate.managedObjectContext deleteObject:_aNote];
+    
+    NSError *error;
+    if (![self.myDelegate.managedObjectContext save:&error]) {
         NSLog(@"Error:%@,%@",error,[error userInfo]);
     }
 }
