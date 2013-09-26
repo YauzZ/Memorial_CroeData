@@ -30,6 +30,9 @@
 {
     [super viewDidLoad];
     self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    _textView.delegate = (id) self;
+    
+
 	// Do any additional setup after loading the view.
     if (_aNote == nil) {
         [self insertNote];
@@ -47,9 +50,19 @@
     }
 }
 
+- (void)textViewDidChange:(UITextView *)textView
+{
+    for (NSString *subStr in [_textView.text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        if (subStr.length > 0) {
+            self.navigationItem.title = subStr;
+            break;
+        }
+    }
+}
+
 - (void)updateNote
 {
-    _aNote.title = self.title;
+    _aNote.title = self.navigationItem.title;
     _aNote.content = _textView.text;
     _aNote.modify_at = [NSDate date];
     
