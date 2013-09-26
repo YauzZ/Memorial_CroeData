@@ -22,6 +22,7 @@
 		3B482C7317F3DECA00FA499F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B482C5717F3DECA00FA499F /* CoreData.framework */; };
 		3B482C7B17F3DECA00FA499F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B482C7917F3DECA00FA499F /* InfoPlist.strings */; };
 		3B482C7D17F3DECA00FA499F /* memorial_icloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B482C7C17F3DECA00FA499F /* memorial_icloudTests.m */; };
+		3B482C8717F3E0EC00FA499F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B482C8617F3E0EC00FA499F /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3B482C7817F3DECA00FA499F /* memorial_icloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "memorial_icloudTests-Info.plist"; sourceTree = "<group>"; };
 		3B482C7A17F3DECA00FA499F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B482C7C17F3DECA00FA499F /* memorial_icloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memorial_icloudTests.m; sourceTree = "<group>"; };
+		3B482C8617F3E0EC00FA499F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				3B482C6217F3DECA00FA499F /* AppDelegate.h */,
 				3B482C6317F3DECA00FA499F /* AppDelegate.m */,
+				3B482C8617F3E0EC00FA499F /* MainStoryboard.storyboard */,
 				3B482C6817F3DECA00FA499F /* Images.xcassets */,
 				3B482C6517F3DECA00FA499F /* memorial_icloud.xcdatamodeld */,
 				3B482C5A17F3DECA00FA499F /* Supporting Files */,
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B482C8717F3E0EC00FA499F /* MainStoryboard.storyboard in Resources */,
 				3B482C5E17F3DECA00FA499F /* InfoPlist.strings in Resources */,
 				3B482C6917F3DECA00FA499F /* Images.xcassets in Resources */,
 			);

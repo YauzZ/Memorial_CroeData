@@ -7,16 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+//数据模型对象
+@property(strong,nonatomic) NSManagedObjectModel *managedObjectModel;
+//上下文对象
+@property(strong,nonatomic) NSManagedObjectContext *managedObjectContext;
+//持久性存储区
+@property(strong,nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+//初始化Core Data使用的数据库
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+
+//managedObjectModel的初始化赋值函数
+//-(NSManagedObjectModel *)managedObjectModel;
+
+//managedObjectContext的初始化赋值函数
+-(NSManagedObjectContext *)managedObjectContext;
+
 
 @end
