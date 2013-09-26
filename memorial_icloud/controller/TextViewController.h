@@ -13,6 +13,4 @@
 
 @property (weak) Note *aNote;
 
-- (void)insertNote;
-
 @end

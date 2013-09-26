@@ -10,11 +10,14 @@
 #import "AppDelegate.h"
 #import "Note.h"
 #import "MainTableViewCell.h"
+#import "TextViewController.h"
 
 @interface MainViewController ()
 
-@property (weak) NSMutableArray *notes;
-@property (weak) AppDelegate *myDelegate;
+@property (strong) NSMutableArray *notes;
+@property (strong) AppDelegate *myDelegate;
+
+@property (strong) Note *selectedNote;
 
 @end
 
@@ -38,6 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self updateData];
+    self.navigationItem.title = [NSString stringWithFormat:@"备忘录(%d)",[self.notes count]];
     [self.tableView reloadData];
 }
 
@@ -54,7 +58,7 @@
     [request setEntity:entity];
     
     //指定对结果的排序方式 (对data字段进行排序)
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"modify_at"ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"create_at"ascending:NO];
     NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
     [request setSortDescriptors:sortDescriptions];
     
@@ -100,9 +104,27 @@
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
     Note *aNote = _notes[indexPath.row];
-    cell.title.text = aNote.title;
-    cell.date.text = [aNote.create_at description];
+    cell.title.text = aNote.content;
+    
+    //实例化一个NSDateFormatter对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"MM-dd"];
+    NSString *currentDateStr = [dateFormatter stringFromDate:aNote.create_at];
+    cell.date.text = currentDateStr;
     return cell;
+}
+
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    _selectedNote = _notes[indexPath.row];
+    return indexPath;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 /*
@@ -152,6 +174,10 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"openNote"]) {
+        TextViewController * viewController = (TextViewController *)segue.destinationViewController;
+        viewController.aNote = _selectedNote;
+    }
 }
 
 

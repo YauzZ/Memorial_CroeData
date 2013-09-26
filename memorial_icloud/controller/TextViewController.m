@@ -11,7 +11,7 @@
 
 @interface TextViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (weak) AppDelegate *myDelegate;
 @end
 
@@ -31,15 +31,10 @@
     [super viewDidLoad];
     self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	// Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
     if (_aNote == nil) {
         [self insertNote];
-        return;
     }
-    self.title = _aNote.title;
+    self.navigationItem.title = _aNote.content;
     _textView.text = _aNote.content;
 }
 
