@@ -11,6 +11,7 @@
 
 @interface TextViewController ()
 
+- (IBAction)tapTextView:(id)sender;
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (weak) AppDelegate *myDelegate;
 @end
@@ -108,4 +109,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapTextView:(id)sender
+{
+    [_textView resignFirstResponder];
+}
 @end

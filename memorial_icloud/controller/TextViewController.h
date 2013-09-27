@@ -11,6 +11,6 @@
 
 @interface TextViewController : UIViewController
 
-@property (weak) Note *aNote;
+@property (strong) Note *aNote;
 
 @end

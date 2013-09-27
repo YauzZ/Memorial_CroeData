@@ -11,7 +11,7 @@
 @implementation Note (description)
 
 -(NSString *) description{
-    return [NSString stringWithFormat:@"%@ create at %@",self.content,self.create_at];
+    return [NSString stringWithFormat:@"%@ create at %@",self.title,self.create_at];
 }
 
 @end
