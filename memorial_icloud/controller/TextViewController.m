@@ -38,7 +38,7 @@
     if (_aNote == nil) {
         [self insertNote];
     }
-    self.navigationItem.title = _aNote.content;
+    self.navigationItem.title = _aNote.title;
     _textView.text = _aNote.content;
 }
 

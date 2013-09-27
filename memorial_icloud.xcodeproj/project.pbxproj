@@ -236,6 +236,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Yang Hong";
 				TargetAttributes = {
+					3B482C4D17F3DECA00FA499F = {
+						DevelopmentTeam = GW4KG23V88;
+					};
 					3B482C6D17F3DECA00FA499F = {
 						TestTargetID = 3B482C4D17F3DECA00FA499F;
 					};
@@ -411,9 +414,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memorial_icloud/memorial_icloud-Prefix.pch";
 				INFOPLIST_FILE = "memorial_icloud/memorial_icloud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,9 +429,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "memorial_icloud/memorial_icloud-Prefix.pch";
 				INFOPLIST_FILE = "memorial_icloud/memorial_icloud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -493,6 +500,7 @@
 				3B482C8217F3DECA00FA499F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B482C8317F3DECA00FA499F /* Build configuration list for PBXNativeTarget "memorial_icloudTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +509,7 @@
 				3B482C8517F3DECA00FA499F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
